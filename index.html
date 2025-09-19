@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Mastery - Personal Finance Tracker</title>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>JavaScript Mastery Project</h1>
+        <p>
+          Personal Finance Tracker - Demonstrating Variables, Functions, Loops &
+          DOM
+        </p>
+      </div>
+      <div class="content">
+        <!-- PART 1: JavaScript Basics -->
+        <div class="section">
+          <h3>Part 1: Basic Financial Calculator</h3>
+          <div class="input-group">
+            <input
+              type="number"
+              id="income"
+              placeholder="Monthly Income"
+              min="0"
+            />
+            <input
+              type="number"
+              id="expenses"
+              placeholder="Monthly Expenses"
+              min="0"
+            />
+            <button onclick="calculateBudget()">Calculate Budget</button>
+          </div>
+          <div id="budgetResult" class="output"></div>
+        </div>
+
+        <!-- PART 2: Functions -->
+        <div class="section">
+          <h3>Part 2: Expense Tracker (Functions)</h3>
+          <div class="input-group">
+            <input type="text" id="expenseDesc" placeholder="Description" />
+            <input
+              type="number"
+              id="expenseAmount"
+              placeholder="Amount"
+              min="0"
+              step="0.01"
+            />
+            <select id="expenseType" aria-label="Transaction Type">
+              <option value="expense">Expense</option>
+              <option value="income">Income</option>
+            </select>
+            <button onclick="addExpense()">Add Transaction</button>
+          </div>
+          <div id="expenseList" class="output"></div>
+          <div class="summary" id="summaryCards"></div>
+        </div>
+
+        <!-- PART 3: Loops -->
+        <div class="section">
+          <h3>Part 3: Financial Goals & Loops</h3>
+          <div class="input-group">
+            <input
+              type="number"
+              id="goalAmount"
+              placeholder="Savings Goal"
+              min="1"
+            />
+            <input
+              type="number"
+              id="monthlyContribution"
+              placeholder="Monthly Contribution"
+              min="1"
+            />
+            <button onclick="calculateSavingsGoal()">Calculate Timeline</button>
+            <button onclick="generateFinancialTips()">Generate Tips</button>
+          </div>
+          <div id="savingsResult" class="output"></div>
+          <div id="tipsContainer" class="output"></div>
+        </div>
+
+        <!-- PART 4: DOM Manipulation -->
+        <div class="section">
+          <h3>Part 4: Interactive Features (DOM)</h3>
+          <div class="input-group">
+            <button onclick="toggleTheme()" id="themeBtn">🌙 Dark Mode</button>
+            <button onclick="clearAllData()">Clear All</button>
+            <button onclick="exportData()">Export Summary</button>
+          </div>
+          <div id="exportResult" class="output"></div>
+          <div>
+            <h4>Quick Actions:</h4>
+            <div class="quick-actions">
+              <button onclick="addRandomExpense()">Add Random Expense</button>
+              <button onclick="showHiddenFeature()">Surprise Feature</button>
+            </div>
+          </div>
+          <div id="hiddenFeature" class="hidden">
+            <h4>
+              Congratulations! You found the hidden financial quote generator!
+            </h4>
+            <button onclick="generateRandomQuote()">Get Wisdom</button>
+            <div id="quoteDisplay" class="output"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
